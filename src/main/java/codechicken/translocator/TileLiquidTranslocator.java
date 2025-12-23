@@ -339,7 +339,7 @@ public class TileLiquidTranslocator extends TileTranslocator implements IFluidHa
         @Override
         public void stripModifiers() {
             super.stripModifiers();
-            if (Translocator.isGT5uLoaded){
+            if (Translocator.isGT5uLoaded) {
                 if (custom_fluid_rates[side] > 0) {
                     dropItem(GTCompat.getItem(custom_fluid_rates[side]));
                     custom_fluid_rates[side] = 0;

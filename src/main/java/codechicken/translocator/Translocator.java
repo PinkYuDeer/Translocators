@@ -2,12 +2,12 @@ package codechicken.translocator;
 
 import java.io.File;
 
-import cpw.mods.fml.common.Loader;
 import net.minecraft.item.Item;
 
 import codechicken.core.CommonUtils;
 import codechicken.core.launch.CodeChickenCorePlugin;
 import codechicken.lib.config.ConfigFile;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -45,7 +45,7 @@ public class Translocator {
         config = new ConfigFile(new File(CommonUtils.getMinecraftDir() + "/config", "Translocator.cfg")).setComment(
                 "Translocator Configuration File\nDeleting any element will restore it to it's default value\nBlock ID's will be automatically generated the first time it's run");
         isGT5uLoaded = Loader.isModLoaded("gregtech");
-        if(isGT5uLoaded) {
+        if (isGT5uLoaded) {
             GTCompat.init();
         }
     }
